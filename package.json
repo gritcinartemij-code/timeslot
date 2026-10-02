@@ -1,0 +1,9 @@
+{
+  "name": "timeslot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TimeSlot — сервис онлайн-записи. Полноценный локальный MVP без внешних зависимостей.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

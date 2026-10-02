@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="TimeSlot — онлайн-запись для специалистов">
+<title>TimeSlot — онлайн-запись</title><link rel="stylesheet" href="/style.css">
+</head><body>
+<header class="topbar"><a href="#home" class="brand"><span class="brand-icon">▦</span>Time<span>Slot</span></a>
+<nav><a href="#home">Главная</a><a href="#specialists">Специалисты</a><a href="#how">Как работает</a><a href="#pricing">Тарифы</a></nav>
+<div id="accountArea"></div><button class="menu">☰</button></header>
+<div id="app"></div>
+<template id="homeTemplate"><main>
+<section class="hero section"><div class="hero-copy"><span class="eyebrow">⚡ ОНЛАЙН-ЗАПИСЬ ДЛЯ СПЕЦИАЛИСТОВ</span><h1>Удобная запись<br>на <span>ваши услуги</span></h1><p>Создайте страницу, добавьте свободное время и принимайте клиентов без лишних звонков и переписок.</p><div class="hero-buttons"><button class="primary" id="heroRegister">Начать бесплатно →</button><a class="secondary" href="#how">▷ Как это работает</a></div><div class="trust">✓ Профиль за пару минут &nbsp; ✓ Адаптивный сайт &nbsp; ✓ Простая запись</div></div>
+<div class="hero-card"><div class="mock-browser"><div class="mock-top">● ● ● <span>timeslot</span></div><div class="mock-profile"><div class="avatar">АК</div><div><b>Анна Кузнецова</b><small>Репетитор по английскому</small></div></div><h4>Выберите удобное время</h4><div class="mock-calendar"><b>Апрель 2026</b><div class="mock-dates"><i>13</i><i>14</i><i>15</i><i class="active">16</i><i>17</i><i>18</i><i>19</i></div></div><div class="mock-slots"><span>10:00</span><span>12:00</span><span class="active">17:00</span><span>18:00</span></div></div><div class="phone"><b>✓</b><strong>Запись подтверждена</strong><small>16 апреля · 17:00</small></div></div></section>
+<section class="benefits section"><div><b>⚡ Экономит время</b><p>Меньше звонков и сообщений.</p></div><div><b>◈ Удобно клиентам</b><p>Запись в несколько кликов.</p></div><div><b>★ Больше заказов</b><p>Страница работает 24/7.</p></div><div><b>▣ С любого устройства</b><p>Компьютер, планшет или телефон.</p></div></section>
+<section class="section" id="how"><div class="section-title"><span>ПРОСТО И ПОНЯТНО</span><h2>Как это работает?</h2><p>От регистрации до первой записи — четыре шага.</p></div><div class="steps"><div><b>1</b><h3>Создайте профиль</h3><p>Укажите имя и информацию об услуге.</p></div><div><b>2</b><h3>Добавьте время</h3><p>Укажите свободные даты и часы.</p></div><div><b>3</b><h3>Поделитесь страницей</h3><p>Отправьте клиенту свою ссылку.</p></div><div><b>4</b><h3>Получайте записи</h3><p>Занятое время автоматически исчезает.</p></div></div></section>
+<section class="section specialists" id="specialists"><div class="section-title"><span>ПОПРОБУЙТЕ ДЕМО</span><h2>Специалисты</h2><p>Нажмите «Посмотреть», чтобы открыть профиль и свободное время.</p></div><div id="specialistsGrid" class="specialist-grid"></div></section>
+<section class="section pricing" id="pricing"><div class="section-title"><span>ПРОСТЫЕ ТАРИФЫ</span><h2>Начните бесплатно</h2><p>Монетизацию можно подключить после проверки спроса.</p></div><div class="pricing-grid"><div class="price-card"><h3>Старт</h3><div class="price">0 ₽</div><ul><li>✓ Профиль специалиста</li><li>✓ Базовая запись</li><li>✓ Свободные слоты</li></ul><button class="primary full" id="priceRegister">Создать аккаунт</button></div><div class="price-card featured"><span>ПОПУЛЯРНЫЙ</span><h3>Профи</h3><div class="price">299 ₽ <small>/ месяц</small></div><ul><li>✓ Неограниченные записи</li><li>✓ Напоминания</li><li>✓ Расширенная статистика</li></ul><button class="outline full" id="priceRegister2">Скоро</button></div></div></section>
+<section class="cta section"><span>TIME<span>SLOT</span></span><h2>Меньше переписок.<br>Больше времени на работу.</h2><p>Создайте страницу и начните принимать записи.</p><button class="primary" id="ctaRegister">Создать страницу →</button></section>
+</main></template>
+<footer><b>▦ TimeSlot</b><span>Удобная запись на ваши услуги</span><small>© 2026 TimeSlot · MVP</small></footer>
+<div class="modal-backdrop" id="modalBackdrop"><div class="modal"><button class="close" id="closeModal">×</button><div id="modalContent"></div></div></div>
+<div id="toast" class="toast"></div><script src="/app.js"></script>
+<script>
+document.addEventListener("click",e=>{
+ if(e.target.id==="heroRegister"||e.target.id==="priceRegister"||e.target.id==="ctaRegister") authModal("register");
+ if(e.target.id==="priceRegister2") toast("Платный тариф будет подключён после проверки спроса.");
+});
+</script>
+</body></html>
